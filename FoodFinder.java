@@ -17,7 +17,7 @@ public class FoodFinder extends Application {
         VBox rootLayout = new VBox();
 
         // Set up the window
-        primaryStage.setTitle("FoodFinder");
+        primaryStage.setTitle("Recipro");
         primaryStage.setScene(new Scene(rootLayout, 860, 660));
 
         // Initialize the tab manager and add a HomeTab
