@@ -49,7 +49,12 @@ class HomeTab extends Tab {
         // Button to submit the query
         Button searchButton = new Button("Search");
         searchButton.setOnAction(a -> {
-            fetchIngredients();
+                        try {
+				fetchIngredients();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             searchField.setText("");
         });
 
@@ -73,9 +78,12 @@ class HomeTab extends Tab {
      * Fetches the comma-separated ingredients in the ingredient field
      * and initiates a search.
      */
-    private void fetchIngredients() {
+    private void fetchIngredients() throws SQLException {
         for (String s : searchField.getText().split(", ")) {
-            System.out.println(s); // temporarily print ingredients to the console
+            Connect newConnection = new Connect();
+            newConnection.query(s);
+            //Temporarily print ingredients to the console
+        	newConnection.getResults();
         }
 
         getTabPane().getTabs().add(new SearchTab());
