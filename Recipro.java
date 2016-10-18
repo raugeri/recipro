@@ -9,8 +9,14 @@ import javafx.stage.Stage;
  */
 public class Recipro extends Application {
 
+    /**
+     * The TabPane stores and manages all open tabs.
+     */
     private TabPane tabs;
 
+    /**
+     * Initializes a new Stage as the main window.
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Primary layout for the window
@@ -32,6 +38,9 @@ public class Recipro extends Application {
         primaryStage.show();
     }
 
+    /**
+     * Returns a completed MenuBar for the window.
+     */
     private MenuBar createMenuBar() {
         MenuBar menuBar  = new MenuBar();
 
