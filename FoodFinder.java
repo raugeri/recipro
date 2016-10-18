@@ -39,7 +39,7 @@ public class FoodFinder extends Application {
 
         MenuItem newRecipeCommand = new MenuItem("New Recipe...");
         newRecipeCommand.setOnAction(a -> {
-            tabs.getTabs().add(new RecipeTab());
+          tabs.getTabs().add(new RecipeTab());
         });
 
         fileMenu.getItems().add(newRecipeCommand);
