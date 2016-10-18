@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 /**
  * Created by Dillon Fagan on 9/13/16.
  */
-public class FoodFinder extends Application {
+public class Recipro extends Application {
 
     private TabPane tabs;
 
