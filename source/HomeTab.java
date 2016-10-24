@@ -28,12 +28,12 @@ class HomeTab extends Tab {
         primaryLayout.setPadding(new Insets(16, 16, 16, 16));
         primaryLayout.setSpacing(20);
         primaryLayout.setAlignment(Pos.CENTER);
-        primaryLayout.setBackground(new Background(new BackgroundFill(Color.rgb(220, 60, 60), CornerRadii.EMPTY, Insets.EMPTY)));
+        primaryLayout.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // Title of the application, shown in large font
-        Label titleLabel = new Label("FoodFinder");
+        Label titleLabel = new Label("Recipro");
         titleLabel.setFont(new Font("Verdana", 32));
-        titleLabel.setTextFill(Color.WHITE);
+        titleLabel.setTextFill(Color.rgb(220, 60, 60));
 
         // Secondary layout to house input and submit button
         HBox secondaryLayout = new HBox();
