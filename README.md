@@ -1,1 +1,1 @@
-# recipro
+# Recipro: The Recipe Database

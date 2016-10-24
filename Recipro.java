@@ -7,17 +7,23 @@ import javafx.stage.Stage;
 /**
  * Created by Dillon Fagan on 9/13/16.
  */
-public class FoodFinder extends Application {
+public class Recipro extends Application {
 
+    /**
+     * The TabPane stores and manages all open tabs.
+     */
     private TabPane tabs;
 
+    /**
+     * Initializes a new Stage as the main window.
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Primary layout for the window
         VBox rootLayout = new VBox();
 
         // Set up the window
-        primaryStage.setTitle("FoodFinder");
+        primaryStage.setTitle("Recipro");
         primaryStage.setScene(new Scene(rootLayout, 860, 660));
 
         // Initialize the tab manager and add a HomeTab
@@ -32,6 +38,9 @@ public class FoodFinder extends Application {
         primaryStage.show();
     }
 
+    /**
+     * Returns a completed MenuBar for the window.
+     */
     private MenuBar createMenuBar() {
         MenuBar menuBar  = new MenuBar();
 
@@ -39,7 +48,7 @@ public class FoodFinder extends Application {
 
         MenuItem newRecipeCommand = new MenuItem("New Recipe...");
         newRecipeCommand.setOnAction(a -> {
-            tabs.getTabs().add(new RecipeTab());
+          tabs.getTabs().add(new RecipeTab());
         });
 
         fileMenu.getItems().add(newRecipeCommand);
